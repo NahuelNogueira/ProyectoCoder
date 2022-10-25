@@ -4,12 +4,10 @@
 
 {% block contenidoQueCambia %}
 
-
-    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Este es el título del Inicio que cambio</h1>
+    <h1>Bienvenido!</h1>
   
 
-    <h3>Podes buscar una camada:</h3>
+    <h3>Podés buscar una camada:</h3>
 
     <form action="/AppCoder/buscar/" method="GET">
 
@@ -17,21 +15,20 @@
 
         <input type="submit" value="Buscar">
 
-
-
-
     </form>
-
-    
 
     {% if cursos %}
 
     <p>Estamos buscando el: {{camada}}</p>
 
     <ul>
+
 	{% for curso in cursos %}
+
 		<li> {{curso.nombre}} </li>
+
 		<li> {{curso.camada}} </li>
+
 	{% endfor %}
 
     </ul>
